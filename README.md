@@ -13,7 +13,7 @@ In-app Purchase Service<br>
 ## Installation Guide (Only First Time)
 Run below commands into your terminal:
 
-NOTICE: if your port 8889 and 3308 is already in use, please set DOCKER_HTTP_PORT and DOCKER_MYSQL_PORT to free ports in .env file.
+NOTICE: if your port 8889 and 3308 are already in use, please set DOCKER_HTTP_PORT and DOCKER_MYSQL_PORT to free ports in .env file.
 
 ```
 git clone https://github.com/behzad-fz/In-app-purchase.git

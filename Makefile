@@ -3,7 +3,7 @@ MYSQL_PASSWORD=root
 
 help:
 	@echo ""
-	@echo "/--- Teknesyon ------------/*In-app Purchase Service*/------------/";
+	@echo "/--- Teknasyon ------------/*In-app Purchase Service*/------------/";
 	@echo ""
 	@echo " up		Create and start containers"
 	@echo " destroy	Stop and remove containers"

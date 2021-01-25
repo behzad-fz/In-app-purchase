@@ -33,7 +33,7 @@ root-shell:
 
 setup:
 	docker-compose exec php composer install
-	docker-compose exec php npm install
+	# docker-compose exec php npm install
 	docker-compose exec php php artisan storage:link
 	docker-compose exec php php artisan key:generate
 	docker-compose exec php php artisan migrate

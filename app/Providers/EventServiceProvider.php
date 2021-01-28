@@ -2,6 +2,12 @@
 
 namespace App\Providers;
 
+use App\Events\SubscriptionCanceled;
+use App\Events\SubscriptionRenewed;
+use App\Events\SubscriptionStarted;
+use App\Listeners\ReportCancelingSubscription;
+use App\Listeners\ReportRenewingSubscription;
+use App\Listeners\ReportStartingNewSubscription;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -18,6 +24,15 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        SubscriptionStarted::class => [
+            ReportStartingNewSubscription::class
+        ],
+        SubscriptionCanceled::class => [
+            ReportCancelingSubscription::class
+        ],
+        SubscriptionRenewed::class => [
+            ReportRenewingSubscription::class
+        ]
     ];
 
     /**

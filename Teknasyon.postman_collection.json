@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "ec03d7f1-50c3-488a-b44a-5f289cc43d3c",
+		"name": "Teknasyon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"uid\" : \"۱\",\n    \"appid\" : \"۲\",\n    \"language\" : \"۳\",\n    \"os\" : \"android\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8889/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8889",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "client-token",
+						"value": "$2y$10$akfg6Vju8VYzsxrm6wvXyO8bPpq3RJzxe0oj9zHNlM0/mBeq92Fxm",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"receipt\" : \"16546512306515\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8889/api/v1/purchase",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8889",
+					"path": [
+						"api",
+						"v1",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-subscription",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "client-token",
+						"value": "$2y$10$p0p52RFaT4stR/bqbshiIeuPl1d/X/UocnPg6Sk/MOfENqxdwhKhq",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8889/api/v1/check-subscription",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8889",
+					"path": [
+						"api",
+						"v1",
+						"check-subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"uid\" : \"۱\",\n    \"appid\" : \"۲\",\n    \"language\" : \"۳\",\n    \"os\" : \"ios\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8889/api/v1/report",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8889",
+					"path": [
+						"api",
+						"v1",
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -17,3 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api'], function () {
+    Route::apiResource('register', 'RegisterController')->only('store');
+
+    Route::group(['middleware' => 'hasClientToken'], function () {
+        Route::post('purchase', 'PurchaseController@new');
+        Route::get('check-subscription', 'SubscriptionController@status');
+    });
+
+    Route::get('report', 'ReportController@index');
+
+
+});

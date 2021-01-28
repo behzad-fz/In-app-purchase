@@ -63,3 +63,5 @@ RUN mkdir -p /home/dev/.composer && \
     chown -R dev:dev /home/dev
 
 WORKDIR /srv/www
+
+RUN chown -R dev:dev /var/www

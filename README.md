@@ -1,5 +1,4 @@
-# T E K N A S Y O N
-In-app Purchase Service<br>
+# In-app Purchase Service
 
 ## Requirements:
 - Docker
